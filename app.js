@@ -22,7 +22,10 @@ app.get('/api/unique-records', (req, res) => {
     for (let i = 0; i < 2000; i++) {
         records.push(generateUniqueRecord());
     }
-    res.json(records);
+    const payload = {
+           users:records
+    }
+    res.json(payload);
 });
 
 app.listen(process.env.PORT, () => {
