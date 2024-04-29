@@ -19,7 +19,7 @@ function generateUniqueRecord() {
 // Endpoint to fetch 2000 unique records
 app.get('/api/unique-records', (req, res) => {
     const records = [];
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 500; i++) {
         records.push(generateUniqueRecord());
     }
     const payload = {
