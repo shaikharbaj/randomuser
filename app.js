@@ -25,7 +25,7 @@ app.get('/api/unique-records', (req, res) => {
     const payload = {
            users:records
     }
-    res.json(payload);
+    return res.status(201).json({success:true,users:records})
 });
 
 app.listen(process.env.PORT, () => {
